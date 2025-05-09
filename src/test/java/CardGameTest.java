@@ -37,4 +37,27 @@ public class CardGameTest {
         ArrayList<Card> output = game.shuffleDeck();
         assertEquals(output.size(), testDeck.size());
     }
+
+    @Test
+    public void shuffleDeck_returns_different_deck(){
+        ArrayList<Card> output = game.shuffleDeck();
+        assertNotEquals(output.get(1), testDeck.get(1));
+        assertNotEquals(output.get(10), testDeck.get(10));
+        assertNotEquals(output.get(20), testDeck.get(20));
+    }
+
+    @Test
+    public void sortDeck_returns_same_size_array_after_sorting(){
+        ArrayList<Card> output = game.sortDeck();
+        assertEquals(output.size(), testDeck.size());
+    }
+
+    @Test
+    public void sortDeckIntoSuits_returns_same_size_array_after_sorting(){
+        ArrayList<Card> output = game.sortDeckIntoSuits();
+        assertEquals(output.size(), testDeck.size());
+    }
+
+
+
 }
