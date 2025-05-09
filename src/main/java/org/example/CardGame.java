@@ -10,6 +10,9 @@ public class CardGame {
 
     ArrayList<Card> originalDeck = deck.getDeck();
     public Card dealCard(){
+        if (originalDeck.isEmpty()) {
+            throw new IllegalStateException("No more cards to deal.");
+        }
         Card firstCard = originalDeck.get(0);
         System.out.println(originalDeck.get(0));
         originalDeck.remove(0);
