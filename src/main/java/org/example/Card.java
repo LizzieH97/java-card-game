@@ -9,24 +9,6 @@ public class Card {
         this.symbol = symbol;
         this.value = value;
     }
-    public Suit getSuit() {
-        return suit;
-    }
-    public void setSuit(Suit suit) {
-        this.suit = suit;
-    }
-    public String getSymbol() {
-        return symbol;
-    }
-    public void setSymbol(String symbol) {
-        this.symbol = symbol;
-    }
-    public int getValue() {
-        return value;
-    }
-    public void setValue(int value) {
-        this.value = value;
-    }
 
     @Override
     public String toString() {

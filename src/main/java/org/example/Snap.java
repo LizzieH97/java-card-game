@@ -1,5 +1,4 @@
 package org.example;
-
 import java.util.ArrayList;
 
 public class Snap extends CardGame{
@@ -14,6 +13,7 @@ public class Snap extends CardGame{
         Player playerOne = new Player(1, true);
         Player playerTwo = new Player(2, false);
         int i = 1;
+
         userCommandRunner.runCommands();
 
         while (i < newShuffledDeck.size()) {
@@ -38,7 +38,9 @@ public class Snap extends CardGame{
                 } else if (playerTwo.isTurn) {
                     System.out.println("Player Two's Turn:");
                 }
+
                 userCommandRunner.runSnapCommands(playerOne, playerTwo);
+
                 if (userCommandRunner.runEndCommands()) {
                     startGame();
                 }
